@@ -16,7 +16,9 @@ test("two entrants build a round 1 bracket; both see the match", async ({ browse
     await b.getByRole("button", { name: /join tournament/ }).click();
     await a.getByRole("button", { name: /build bracket/ }).click();
     await expect(b.locator(".br-list li")).toHaveCount(1);
-    await expect(b.locator(".br-list li").first()).toContainText(["alice", "bob"]);
+    const text = (await b.locator(".br-list li").first().textContent()) ?? "";
+    expect(text).toContain("alice");
+    expect(text).toContain("bob");
   } finally {
     await cleanup();
   }
