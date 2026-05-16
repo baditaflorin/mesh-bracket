@@ -1,14 +1,9 @@
-/* App-local styles. Mesh chrome (settings drawer, self-ref bar) is provided by
- * @baditaflorin/mesh-common/styles.css imported in main.tsx. */
-
 :root {
   color-scheme: dark;
 }
-
 * {
   box-sizing: border-box;
 }
-
 html,
 body,
 #root {
@@ -19,33 +14,39 @@ body,
   background: var(--mesh-bg);
   color: var(--mesh-fg);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-  -webkit-tap-highlight-color: transparent;
 }
-
-.feature-placeholder {
-  padding: 6rem 1.5rem 2rem;
-  text-align: center;
+.br-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  gap: 0.3rem;
 }
-
-.feature-placeholder h1 {
-  font-size: 1.6rem;
-  margin: 0;
+.br-list li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  padding: 0.45rem 0.7rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0.35rem;
+  font-size: 0.9rem;
+}
+.br-list li.is-mine {
+  border: 1px solid var(--mesh-accent);
+}
+.br-round {
+  opacity: 0.55;
+  font-size: 0.78rem;
+}
+.br-vs {
+  opacity: 0.5;
+}
+.is-winner {
   color: var(--mesh-accent);
+  font-weight: 700;
 }
-
-.feature-placeholder p {
-  max-width: 32rem;
-  margin: 0;
+.br-result {
+  margin-left: auto;
   opacity: 0.85;
-  line-height: 1.5;
-}
-
-.feature-status {
-  font-size: 0.85rem;
-  opacity: 0.6;
-  font-variant-numeric: tabular-nums;
 }
