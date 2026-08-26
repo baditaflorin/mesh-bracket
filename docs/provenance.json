@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "app": "mesh-bracket",
+  "sourceCommit": "66aa347fedf125da4bc361ec055890c0117ac3da",
+  "releaseCommit": "66aa347fedf125da4bc361ec055890c0117ac3da",
+  "meshCommonCommit": "025f7ff72e50c4b54a3f4a2d8c88f4f600dec78f",
+  "recordedAt": "2026-08-26T19:59:26Z"
+}
