@@ -9,7 +9,7 @@ steps:
     commands:
       - git clone --depth 1 --filter=blob:none --sparse https://github.com/baditaflorin/mesh-common.git ../mesh-common
       - git -C ../mesh-common sparse-checkout set --cone src testing scaffold scripts presets
-      - test "$(git -C ../mesh-common rev-parse HEAD)" = "025f7ff72e50c4b54a3f4a2d8c88f4f600dec78f"
+      - test "$(git -C ../mesh-common rev-parse HEAD)" = "7fda31aa82603cb63414932b565173db281728aa"
       - npm ci --prefix ../mesh-common
       - npm ci
       - npm run fmt:check
